@@ -50,6 +50,10 @@ Vagrant.configure("2") do |config|
 
             end
 
+            if Vagrant.has_plugin?("vagrant-vbguest")
+                config.vbguest.auto_update = false
+            end
+
             if Vagrant.has_plugin?("vagrant-proxyconf")
                 # 若安装了plugin，则设置代理信息
                 config.proxy.http = "http://192.168.32.209:7777"

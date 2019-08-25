@@ -24,11 +24,11 @@ ufw disable
 apt-get update && apt-get install -y apt-transport-https ca-certificates curl software-properties-common
 
 ## Add Docker's official GPG key
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
+curl -fsSL http://mirrors.aliyun.com/docker-ce/linux/ubuntu/gpg | apt-key add -
 
 ## Add Docker apt repository.
 add-apt-repository \
-    "deb [arch=amd64] https://download.docker.com/linux/$(. /etc/os-release; echo "$ID") \
+    "deb [arch=amd64] http://mirrors.aliyun.com/docker-ce/linux/$(. /etc/os-release; echo "$ID") \
     $(lsb_release -cs) \
     stable"
 
